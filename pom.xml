@@ -15,7 +15,22 @@
 
     <dependencies>
 
-        <dependency>
+      <dependency>
+        <groupId>pentaho</groupId>
+        <artifactId>common-ui</artifactId>
+        <version>INNOVATION-SNAPSHOT</version>
+        <type>jar</type>
+      </dependency>
+
+      <dependency>
+        <groupId>pentaho</groupId>
+        <artifactId>common-ui</artifactId>
+        <version>INNOVATION-SNAPSHOT</version>
+        <!--<classifier>js</classifier>-->
+        <type>zip</type>
+      </dependency>
+
+      <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-container-native</artifactId>
             <version>${exam.version}</version>
@@ -97,5 +112,20 @@
         </dependency>
     </dependencies>
 
+  <!--<repositories>-->
+    <!--<repository>-->
+      <!--<id>pentaho.resolve.repo</id>-->
+      <!--<name>Pentaho Group Resolve Repository</name>-->
+      <!--<url>file:${user.home}/.m2/repository</url>-->
+      <!--<releases>-->
+        <!--<updatePolicy>always</updatePolicy>-->
+        <!--<checksumPolicy>fail</checksumPolicy>-->
+      <!--</releases>-->
+      <!--<snapshots>-->
+        <!--<updatePolicy>always</updatePolicy>-->
+        <!--<checksumPolicy>fail</checksumPolicy>-->
+      <!--</snapshots>-->
+    <!--</repository>-->
+  <!--</repositories>-->
 
 </project>

@@ -3,7 +3,7 @@ package pentaho;
 /**
  * Created by nbaker on 9/12/14.
  */
-public class MyServiceImpl implements IMyService {
+public class MyServiceImpl implements IMyService, IOtherInterface {
     private long bundleId;
 
     public MyServiceImpl(long bundleId) {

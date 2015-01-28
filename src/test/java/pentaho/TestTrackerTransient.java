@@ -46,6 +46,7 @@ public class TestTrackerTransient {
 
         InputStream inp = bundle()
                 .add(IMyService.class)
+                .add(IOtherInterface.class)
                 .add(MyServiceImpl.class)
                 .add( MyServiceFactory.class )
                 .add( MyServiceTracker.class )
@@ -80,7 +81,7 @@ public class TestTrackerTransient {
     @Test
     public void testHttpTracker() throws BundleException {
 
-        bundleContext.registerService(IMyService.class.getName(), new MyServiceFactory(), null);
+        bundleContext.registerService(new String[]{IMyService.class.getName(), IOtherInterface.class.getName()}, new MyServiceFactory(), null);
         Bundle bundle = getBundleBySymbolicName("Test_Bundle");
         bundle.stop();
         bundle.start();
